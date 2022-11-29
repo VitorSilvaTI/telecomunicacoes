@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telecomunicações</title>
+    <link rel="stylesheet" href="/public/assets/css/calculator-style.css">
+</head>
+
+<body>
+    <section>
+        <div class="main-text-calculator">Cálculo da distância e altura mínima</div>
+    </section>
+    <section class="general">
+        <div class="calculator-container">
+            <form action="/resultados" method="post" name="calculateData">
+                <div class="title-form">Preencha os campos abaixo</div>
+                <div class="container-number-inputs">
+
+                    <div class="first-tower-input">
+                        <input type="number" name="firstTowerInput" placeholder="Altura da torre" required>
+                    </div>
+    
+                    <div class="second-tower-input">
+                        <input type="number" name="secondTowerInput" placeholder="Altura da torre" required>
+                    </div>
+                </div>
+                <div class="calculate-height">
+                    <label for="height-calculate">
+                        <input type="checkbox" id="height-calculate" name="checkboxHeight">
+                        Incluir cálculo da altura
+                    </label>
+                </div>
+                <div class="btn-calculate">
+                    <input type="submit" value="Calcular" name="btnSubmit" src="/resultado">
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

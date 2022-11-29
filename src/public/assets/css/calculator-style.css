@@ -1,0 +1,141 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Oswald&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --btn-bg: #09888d;
+    --form-bg: #f5f5f5;
+    --color-text: #ffffff;
+    --color-text-form: #5e5e5e;
+    --text-shadow-input: #dbdbdb;
+    --btn-shadow:rgba(0, 0, 0, 0.322);
+}
+
+body {
+    background: linear-gradient(to bottom right, #013750, #2c6b74);
+    height: 98vh;
+}
+
+.main-text-calculator {
+    font-size: 2em;
+    text-align: center;
+    color: var(--color-text);
+    font-family: 'Oswald', sans-serif;
+    margin-top: 10px;
+}
+
+.general {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    border-radius: 3px;
+    background-color: var(--form-bg);
+}
+
+.title-form {
+    font-size: 1.2em;
+    text-align: center;
+    color: var(--color-text-form);
+    font-family: 'Oswald', sans-serif;
+    margin: 5px;
+    margin-bottom: 5px;
+}
+
+.container-number-inputs {
+    margin-bottom: 52px;
+}
+
+.first-tower-input {
+    margin: 10px;
+    margin-bottom: 15px;
+}
+
+.second-tower-input {
+    margin: 10px;
+}
+
+.btn-calculate {
+    text-align: center;
+}
+
+input[type="number"] {
+    border: 0;
+    outline: 0;
+    height: 23px;
+    width: 250px;
+    padding: 20px;
+    font-size: 15px;
+    padding-left: 5px;
+    font-family: 'Noto Sans JP', sans-serif;
+    box-shadow: 1px 1px 1px var(--text-shadow-input);
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type="number"]::placeholder {
+    color: var(--color-text-form);
+}
+
+.calculate-height {
+    margin: 0px 10px 30px 10px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: var(--color-text-form);
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.btn-calculate {
+    margin-top: 48px;
+    margin-bottom: 18px;
+}
+
+.btn-calculate > input {
+    border: 0;
+    width: 75%;
+    transition: 1s;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 8px 0px;
+    font-size: 1em;
+    color: var(--color-text);
+    background-color: var(--btn-bg);
+    font-family: 'Noto Sans JP', sans-serif;
+    text-shadow: 1px 1px 1px var(--btn-shadow);  
+}
+
+.btn-calculate > input:hover {
+    opacity: 0.8;
+}
+
+@media(max-width: 426px) {
+    .main-text-calculator {
+        font-size: 1.4em;
+    }
+}

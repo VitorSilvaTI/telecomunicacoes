@@ -1,0 +1,145 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Oswald&display=swap');
+
+@keyframes spin_words {
+    0% {
+        transform: translateY(0%);
+    }
+
+    25% {
+        transform: translateY(-112%);
+    }
+
+    50% {
+        transform: translateY(-100%);
+    }
+
+    75% {
+        transform: translateY(-212%);
+    }
+
+    100% {
+        transform: translateY(-200%);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-text: #ffffff;
+    --bg-button: #09888d;
+    --text-shadow-span: rgba(0, 0, 0, 0.521);
+    --text-shadow-buttton: rgba(0, 0, 0, 0.322);
+}
+
+body {
+    background: linear-gradient(to bottom right, #013750, #2c6b74);
+}
+
+section {
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+}
+
+.presentation-title {
+    font-size: 3em;
+    text-align: center;
+    color: var(--color-text);
+    font-family: 'Oswald', sans-serif;
+}
+
+.tool-description {
+    font-size: 1em;
+    text-align: center;
+    color: var(--color-text);
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.action-buttons-container {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper-words {
+    display: flex;
+    height: 20px;
+    font-size: 1em;
+}
+
+.words {
+    overflow: hidden;
+    margin-left: 2px;
+    height: 25px;
+    background-color: var(--bg-button);
+}
+
+.words span {
+    display: block;
+    padding-left: 1px;
+    color: var(--color-text);
+    font-size: 1em;
+    text-shadow: 1px 1px 1px var(--text-shadow-span);
+    animation: spin_words 5s ease-in-out infinite alternate;
+}
+
+.btn-calculate {
+    position: relative;
+    width: 300px;
+    padding: 10px 0px;
+    border-radius: 4px;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;  /* indica que os filhos devem ocupar o espaço 3d*/
+    background-color: var(--bg-button);
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-text);
+    font-family: 'Noto Sans JP', sans-serif;
+    text-shadow: 1px 1px 1px var(--text-shadow-buttton);  
+}
+
+.btn-calculate::after {
+    content: 'Vamos lá';
+    position: absolute;
+    top: -100%;
+    left: 0px;
+    width: 100%;
+    font-size: 1em;
+    text-align: center;
+    padding: 10px 0px;
+    border-radius: 4px;
+    transform: rotateX(90deg);
+    transform-origin: left bottom;
+    background-color: var(--bg-button);
+    text-shadow: 1px 1px 1px var(--text-shadow-button);
+}
+
+.btn-calculate:hover {
+    transform-origin: center bottom;
+    transform: rotateX(-90deg) translateY(100%);
+}
+
+@media(max-width: 426px) {
+    .presentation-title {
+        font-size: 2.7em;
+    }
+
+    .wrapper-words {
+        font-size: 0.8em;
+    }
+
+    .btn-calculate {
+        width: 250px;
+    }
+}
