@@ -1,10 +1,14 @@
 {
+  "homepage": "https://VitorSilvaTI.github.io/telecomunicacoes",
   "name": "telecomunicacoes",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
+    "predeploy": "npm run build",
+    "build": "node server.js",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,8 +19,10 @@
     "body-parser": "^1.20.1",
     "express": "^4.18.2",
     "fs": "^0.0.1-security"
+    
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "gh-pages": "^4.0.0"
   }
 }
