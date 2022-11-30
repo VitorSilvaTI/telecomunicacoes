@@ -3,7 +3,8 @@ import { URL } from 'url'
 
 //dirname alternativo
 const __dirname = new URL('../', import.meta.url).pathname
-const filePath = `${__dirname.replace('/', '')}` + 'data/results.json'
+//coloque o caminho para o arquivo results.json aqui caso dê erro 
+const filePath = `${__dirname.replace('/', '')}` + 'data/results.json' 
 
 class Calculator {
     constructor() {
@@ -11,7 +12,7 @@ class Calculator {
     }
 
     //função para calcular a raiz quadrada
-    squareRoot = (tower) => Math.sqrt(12 * 7 * tower)
+    squareRoot = (tower) => Math.sqrt(12.7 * tower)
 
     //função para salvar os resultados do cálculo no JSON(Javascript Object Notation)
     saveJson() {
@@ -32,7 +33,7 @@ class Calculator {
     calculateMinimumHeight(calculateMinimumDistance) {
         const minimumDistance = calculateMinimumDistance
         const distancePow = Math.pow(minimumDistance, 2)
-        const minimunHeight = (distancePow / 84).toFixed(2)
+        const minimunHeight = (distancePow / 12.7).toFixed(2)
         return minimunHeight
     }
 
